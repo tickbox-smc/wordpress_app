@@ -47,10 +47,6 @@ application wordpress_app (
   # Create an lb component for each declared load balancer.
   $lb_components = collect_component_titles($nodes, Wordpress_app::Lb)
 
-  if (size($lb_components) == 0) {
-    fail("Found no lb component for Wordpress_app[${name}]. At least one is required")
-  }
-
   $lb_components.each |$comp_name| {
     wordpress_app::lb { $comp_name:
       balancermembers => $web_https,
