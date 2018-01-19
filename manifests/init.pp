@@ -3,9 +3,9 @@ application wordpress_app (
   String $db_user         = 'wordpress',
   String $db_pass         = 'wordpress',
   String $web_int         = '',
-  String $web_port        = '8080',
+  String $web_port        = '8090',
   String $lb_ipaddress    = '0.0.0.0',
-  String $lb_port         = '80',
+  String $lb_port         = '90',
   String $lb_balance_mode = 'roundrobin',
   Array  $lb_options      = ['forwardfor','http-server-close','httplog'],
 ){
@@ -39,8 +39,6 @@ application wordpress_app (
       consume     => Database["wdp-${name}"],
       export      => $http,
     }
-
-    notify {"${http['host']}":}
 
     # Return the $http resource for the array.
     $http
