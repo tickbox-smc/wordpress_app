@@ -39,6 +39,9 @@ application wordpress_app (
       consume     => Database["wdp-${name}"],
       export      => $http,
     }
+
+#    notify {$http['host']}
+
     # Return the $http resource for the array.
     $http
   }
