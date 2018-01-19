@@ -51,7 +51,7 @@ application wordpress_app (
   }
 
   if (size($lb_components) > 0) {
-    warn("${web_https}")
+    fail("${web_https}")
   }
 
   $lb_components.each |$comp_name| {
