@@ -3,9 +3,9 @@ application wordpress_app (
   String $db_user         = 'wordpress',
   String $db_pass         = 'wordpress',
   String $web_int         = '',
-  String $web_port        = '108090',
+  String $web_port        = '18090',
   String $lb_ipaddress    = '0.0.0.0',
-  String $lb_port         = '110090',
+  String $lb_port         = '10090',
   String $lb_balance_mode = 'roundrobin',
   Array  $lb_options      = ['forwardfor','http-server-close','httplog'],
 ){
