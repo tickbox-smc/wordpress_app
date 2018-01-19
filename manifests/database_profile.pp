@@ -4,7 +4,7 @@ class wordpress_app::database_profile (
   class { 'mysql::server':
     override_options => {
       'mysqld'       => {
-        'bind_address' => '0.0.0.0',
+        'bind_address' => '172.28.128.6',
         'port'         => '3306',
       },
     },
