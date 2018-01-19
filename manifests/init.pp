@@ -40,7 +40,7 @@ application wordpress_app (
       export      => $http,
     }
 
-#    notify {$http['host']}
+    notify {"${http['host']}":}
 
     # Return the $http resource for the array.
     $http
