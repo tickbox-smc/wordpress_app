@@ -51,7 +51,6 @@ application wordpress_app (
   }
 
   $lb_components.each |$comp_name| {
-    notify {"${comp_name}":}
     wordpress_app::lb { $comp_name:
       balancermembers => $web_https,
       lb_options      => $lb_options,
