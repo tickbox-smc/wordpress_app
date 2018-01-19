@@ -2,7 +2,7 @@ application wordpress_app (
   String $database        = 'wordpress',
   String $db_user         = 'wordpress',
   String $db_pass         = 'wordpress',
-  String $web_int         = '',
+  String $web_int         = '0.0.0.0',
   String $web_port        = '8090',
   String $lb_ipaddress    = '0.0.0.0',
   String $lb_port         = '90',
