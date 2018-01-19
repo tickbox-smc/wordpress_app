@@ -50,6 +50,10 @@ application wordpress_app (
     fail("Found no lb component for Wordpress_app[${name}]. At least one is required")
   }
 
+  if (size($lb_components) > 0) {
+    warn("${web_https}")
+  }
+
   $lb_components.each |$comp_name| {
     wordpress_app::lb { $comp_name:
       balancermembers => $web_https,
