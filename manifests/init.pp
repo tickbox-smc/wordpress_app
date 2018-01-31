@@ -5,7 +5,7 @@ application wordpress_app (
   String $web_int         = 'eth1',
   String $web_port        = '80',
   String $lb_ipaddress    = '0.0.0.0',
-  String $lb_port         = '90',
+  String $lb_port         = '9090',
   String $lb_balance_mode = 'roundrobin',
   Array  $lb_options      = ['forwardfor','http-server-close','httplog'],
 ){
